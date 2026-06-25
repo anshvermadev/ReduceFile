@@ -32,3 +32,8 @@ You can install the latest version of ReduceFile directly from GitHub Releases:
 
 ## Privacy Policy 🔒
 ReduceFile operates 100% locally on your device. It does not collect telemetry, it does not send your images to any external servers, and requires absolutely no backend infrastructure. Your files remain yours.
+
+## Contributing 🤝
+We welcome contributions! Whether you're fixing bugs, improving the UI, or adding new features, we'd love your help.
+
+Please read our [Contributing Guide](CONTRIBUTING.md) for details on how to set up the development environment, guidelines, and how to submit a Pull Request.
