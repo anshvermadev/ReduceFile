@@ -1,0 +1,44 @@
+{
+  "name": "reducefile",
+  "displayName": "ReduceFile",
+  "version": "1.0.0",
+  "description": "Cross-browser file compression extension",
+  "author": "Ansh Verma",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "postinstall": "node patch.js"
+  },
+  "dependencies": {
+    "plasmo": "0.90.5",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "zustand": "^4.5.2",
+    "lucide-react": "^0.378.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0",
+    "@jsquash/jpeg": "^1.1.0",
+    "@jsquash/png": "^2.1.1",
+    "@jsquash/webp": "^1.1.0",
+    "@jsquash/resize": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/chrome": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "3.4.3",
+    "postcss": "8.4.38",
+    "autoprefixer": "10.4.19",
+    "typescript": "5.4.5"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://*/*"
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+    }
+  }
+}
