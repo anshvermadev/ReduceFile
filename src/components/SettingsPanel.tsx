@@ -54,15 +54,29 @@ export function SettingsPanel() {
             <div className="text-sm font-bold text-foreground">Auto-Download</div>
             <div className="text-xs text-muted-foreground font-medium mt-1">Download files when finished</div>
           </div>
-          <div className="relative inline-flex h-6 w-12 items-center rounded-full shadow-neu-pressed transition-colors peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-background [&:has(input:checked)]:bg-primary/20">
-            <input 
-              type="checkbox" 
-              name="toggle" 
-              checked={autoDownload}
-              onChange={(e) => setAutoDownload(e.target.checked)}
-              className="peer sr-only"
-            />
-            <div className="pointer-events-none absolute left-[2px] h-5 w-5 rounded-full shadow-neu bg-background transition-transform peer-checked:translate-x-6"></div>
+          <div className="flex items-center gap-3">
+            <span className={cn(
+              "text-xs font-bold w-6 text-right transition-colors",
+              autoDownload ? "text-primary" : "text-muted-foreground"
+            )}>
+              {autoDownload ? "ON" : "OFF"}
+            </span>
+            <div className={cn(
+              "relative inline-flex h-6 w-12 items-center rounded-full shadow-neu-pressed transition-colors peer-focus-visible:outline-none peer-focus-visible:ring-2 peer-focus-visible:ring-ring peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-background",
+              autoDownload ? "bg-primary" : "bg-black/5 dark:bg-black/40"
+            )}>
+              <input 
+                type="checkbox" 
+                name="toggle" 
+                checked={autoDownload}
+                onChange={(e) => setAutoDownload(e.target.checked)}
+                className="peer sr-only"
+              />
+              <div className={cn(
+                "pointer-events-none absolute left-[2px] h-5 w-5 rounded-full shadow-neu transition-transform",
+                autoDownload ? "translate-x-6 bg-white" : "bg-white dark:bg-neutral-300"
+              )}></div>
+            </div>
           </div>
         </label>
       </div>

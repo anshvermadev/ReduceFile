@@ -56,9 +56,9 @@ export function UploadZone() {
       <p className="text-sm font-bold text-foreground">Click or drag images to compress</p>
       
       <div className="flex justify-center gap-3 mt-4">
-        <span className="px-3 py-1 text-xs font-bold tracking-wider rounded-full shadow-neu text-white bg-gradient-to-r from-blue-500 to-indigo-500">JPG</span>
-        <span className="px-3 py-1 text-xs font-bold tracking-wider rounded-full shadow-neu text-white bg-gradient-to-r from-violet-500 to-fuchsia-500">PNG</span>
-        <span className="px-3 py-1 text-xs font-bold tracking-wider rounded-full shadow-neu text-white bg-gradient-to-r from-emerald-400 to-teal-500">WEBP</span>
+        <span className="px-3 py-1 text-xs font-bold tracking-wider rounded-full shadow-neu text-white bg-gradient-to-r from-orange-500 to-amber-500">JPG</span>
+        <span className="px-3 py-1 text-xs font-bold tracking-wider rounded-full shadow-neu text-white bg-gradient-to-r from-red-500 to-rose-500">PNG</span>
+        <span className="px-3 py-1 text-xs font-bold tracking-wider rounded-full shadow-neu text-white bg-gradient-to-r from-emerald-500 to-teal-500">WEBP</span>
       </div>
       <p className="text-[10px] uppercase tracking-wider text-muted-foreground mt-4 font-bold">Image Formats Only</p>
     </div>

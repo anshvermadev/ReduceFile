@@ -24,7 +24,7 @@ export function FileQueue() {
             <div className="flex-shrink-0">
               {item.status === 'queued' && <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-xs">...</div>}
               {item.status === 'compressing' && <Loader2 className="w-5 h-5 text-primary animate-spin" />}
-              {item.status === 'completed' && <CheckCircle className="w-5 h-5 text-green-500" />}
+              {item.status === 'completed' && <CheckCircle className="w-5 h-5 text-success" />}
               {item.status === 'error' && <AlertCircle className="w-5 h-5 text-destructive" />}
             </div>
             <div className="min-w-0 flex-1">
@@ -34,7 +34,7 @@ export function FileQueue() {
                 {item.result && (
                   <>
                     <span>→</span>
-                    <span className="text-green-600 dark:text-green-400 font-medium">
+                    <span className="text-success font-bold">
                       {formatBytes(item.result.compressedSize)}
                       {' '}({Math.round((1 - item.result.compressedSize / item.result.originalSize) * 100)}%)
                     </span>

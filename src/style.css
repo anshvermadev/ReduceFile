@@ -4,81 +4,88 @@
 
 @layer base {
   :root {
-    /* Soft icy lavender/blue tint for background */
-    --background: 230 40% 96%; /* #f0f2fa */
-    --foreground: 230 20% 20%;
+    /* Soft Light Gray for background */
+    --background: 0 0% 96%; /* #f5f5f5 */
+    --foreground: 0 0% 20%;
 
-    --card: 230 40% 96%;
-    --card-foreground: 230 20% 20%;
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 20%;
 
-    --popover: 230 40% 96%;
-    --popover-foreground: 230 20% 20%;
+    --popover: 0 0% 96%;
+    --popover-foreground: 0 0% 20%;
 
-    /* Vibrant violet/blue primary */
-    --primary: 250 95% 60%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary CTA: Warm Orange */
+    --primary: 25 95% 53%; /* #f97316 */
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 230 40% 92%;
-    --secondary-foreground: 250 95% 60%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 25 95% 53%;
 
-    --muted: 230 25% 85%;
-    --muted-foreground: 230 15% 50%;
+    --muted: 0 0% 88%;
+    --muted-foreground: 215 16% 47%; /* Slate Gray */
 
-    --accent: 250 95% 60%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 25 95% 45%; /* Dark Orange hover */
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 350 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%; /* Modern Red */
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 230 25% 85%;
-    --input: 230 25% 85%;
-    --ring: 250 95% 60%;
+    /* Success and Warning variables for custom usage */
+    --success: 160 84% 39%; /* Emerald Green */
+    --warning: 38 92% 50%; /* Amber */
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 25 95% 53%;
 
     --radius: 1rem;
 
-    /* Tinted Neumorphic Shadows for Light Mode */
-    --neu-shadow-dark: rgba(180, 190, 215, 0.65);
-    --neu-shadow-light: rgba(255, 255, 255, 0.9);
-    --neu-shadow-dark-strong: rgba(180, 190, 215, 0.85);
+    /* Neutral Neumorphic Shadows for Light Mode */
+    --neu-shadow-dark: rgba(200, 200, 200, 0.7);
+    --neu-shadow-light: rgba(255, 255, 255, 1);
+    --neu-shadow-dark-strong: rgba(180, 180, 180, 0.85);
     --neu-shadow-light-strong: rgba(255, 255, 255, 1);
   }
 
   .dark {
-    /* Deep midnight indigo background */
-    --background: 230 25% 15%; /* #1c1e2f */
-    --foreground: 230 20% 95%;
+    /* Charcoal / Near Black background */
+    --background: 0 0% 11%; /* #1c1c1c */
+    --foreground: 0 0% 95%;
 
-    --card: 230 25% 15%;
-    --card-foreground: 230 20% 95%;
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 230 25% 15%;
-    --popover-foreground: 230 20% 95%;
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Bright neon violet primary */
-    --primary: 250 100% 75%;
-    --primary-foreground: 230 25% 10%;
+    /* Primary CTA: Warm Orange */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 230 25% 20%;
-    --secondary-foreground: 250 100% 75%;
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 25 95% 53%;
 
-    --muted: 230 25% 22%;
-    --muted-foreground: 230 15% 65%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 65%; /* Slate Gray */
 
-    --accent: 250 100% 75%;
-    --accent-foreground: 230 25% 10%;
+    --accent: 25 95% 45%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 350 84% 65%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 79% 71%; /* Modern Red */
+    --destructive-foreground: 0 0% 11%;
 
-    --border: 230 25% 22%;
-    --input: 230 25% 22%;
-    --ring: 250 100% 75%;
+    --success: 158 64% 52%; /* Emerald Green */
+    --warning: 43 96% 56%; /* Amber */
 
-    /* Tinted Neumorphic Shadows for Dark Mode */
-    --neu-shadow-dark: rgba(15, 16, 25, 0.85);
-    --neu-shadow-light: rgba(45, 49, 70, 0.65);
-    --neu-shadow-dark-strong: rgba(10, 11, 18, 0.95);
-    --neu-shadow-light-strong: rgba(55, 60, 85, 0.85);
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 25 95% 53%;
+
+    /* Neutral Neumorphic Shadows for Dark Mode */
+    --neu-shadow-dark: rgba(10, 10, 10, 0.8);
+    --neu-shadow-light: rgba(50, 50, 50, 0.5);
+    --neu-shadow-dark-strong: rgba(0, 0, 0, 0.9);
+    --neu-shadow-light-strong: rgba(60, 60, 60, 0.6);
   }
 }
 
