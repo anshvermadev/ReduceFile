@@ -1,12 +1,14 @@
 # ReduceFile 🗜️
 
-ReduceFile is a lightning-fast, privacy-first, cross-browser extension that compresses your images entirely offline using WebAssembly.
+> 🎉 **ReduceFile v2 is now out!** We now feature 100% offline **DOCX (Word Document)** compression alongside image compression!
+
+ReduceFile is a lightning-fast, privacy-first, cross-browser extension that compresses your images and documents entirely offline using WebAssembly.
 
 ## Features ✨
 
 - **100% Offline & Private:** Your files never leave your browser. All compression is done locally on your machine.
 - **Vibrant UI:** Features a beautifully crafted, highly attractive, vibrant Neumorphism design. 
-- **Format Support:** Specifically tailored for compressing **JPG**, **PNG**, and **WEBP** images.
+- **Format Support:** Specifically tailored for compressing **JPG**, **PNG**, **WEBP** images, and now **DOCX** Word Documents natively!
 - **Multiple Modes:** Choose between "Smart" (Auto), "Balanced" (Best ratio), or "Maximum" (Smallest size) compression modes.
 - **Auto-Download:** Seamlessly process your queue and download compressed files instantly.
 - **Dark & Light Mode:** Fully supports both light and dark system preferences with specifically curated palettes.

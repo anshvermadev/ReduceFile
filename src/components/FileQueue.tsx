@@ -29,12 +29,17 @@ export function FileQueue() {
             </div>
             <div className="min-w-0 flex-1">
               <p className="text-sm font-medium truncate">{item.file.name}</p>
-              <div className="text-xs text-muted-foreground flex gap-2">
-                <span>{formatBytes(item.file.size)}</span>
+              <div className="text-xs text-muted-foreground flex gap-2 overflow-hidden">
+                <span className="flex-shrink-0">{formatBytes(item.file.size)}</span>
+                {item.status === 'error' && (
+                  <span className="text-destructive font-bold ml-2 truncate" title={item.error}>
+                    - {item.error}
+                  </span>
+                )}
                 {item.result && (
                   <>
-                    <span>→</span>
-                    <span className="text-success font-bold">
+                    <span className="flex-shrink-0">→</span>
+                    <span className="text-success font-bold flex-shrink-0">
                       {formatBytes(item.result.compressedSize)}
                       {' '}({Math.round((1 - item.result.compressedSize / item.result.originalSize) * 100)}%)
                     </span>

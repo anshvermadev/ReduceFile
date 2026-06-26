@@ -19,13 +19,13 @@ function IndexPopup() {
       <QueueProcessor />
       <div className="flex mx-4 mt-4 p-1 rounded-2xl shadow-neu-pressed bg-background">
         <button
-          className={cn("flex-1 py-2 text-sm font-bold rounded-xl transition-all duration-300", activeTab === 'compress' ? 'shadow-neu text-white bg-primary' : 'text-muted-foreground hover:text-foreground')}
+          className={cn("flex-1 py-2 text-sm font-bold rounded-xl transition-all duration-300", activeTab === 'compress' ? 'shadow-[0_0_15px_rgba(249,115,22,0.5)] text-white bg-primary scale-[1.02]' : 'text-muted-foreground hover:text-foreground hover:scale-[1.01]')}
           onClick={() => setActiveTab('compress')}
         >
           Compress
         </button>
         <button
-          className={cn("flex-1 py-2 text-sm font-bold rounded-xl transition-all duration-300", activeTab === 'settings' ? 'shadow-neu text-white bg-primary' : 'text-muted-foreground hover:text-foreground')}
+          className={cn("flex-1 py-2 text-sm font-bold rounded-xl transition-all duration-300", activeTab === 'settings' ? 'shadow-[0_0_15px_rgba(249,115,22,0.5)] text-white bg-primary scale-[1.02]' : 'text-muted-foreground hover:text-foreground hover:scale-[1.01]')}
           onClick={() => setActiveTab('settings')}
         >
           Settings
