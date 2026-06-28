@@ -35,6 +35,14 @@ function IndexPopup() {
       <div className="flex-1 overflow-y-auto p-4">
         {activeTab === 'compress' ? (
           <div className="space-y-4">
+            <div className="text-center mb-4 mt-2">
+              <h1 className="text-2xl font-black bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent drop-shadow-sm">
+                ReduceFile
+              </h1>
+              <p className="text-xs text-muted-foreground font-medium mt-1 uppercase tracking-widest">
+                Smart Image & Document Compression
+              </p>
+            </div>
             <UploadZone />
             <FileQueue />
           </div>
