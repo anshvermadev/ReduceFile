@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
-import ReactCrop, { type Crop } from 'react-image-crop'
+import ReactCrop, { centerCrop, makeAspectCrop, type Crop } from 'react-image-crop'
 import 'react-image-crop/dist/ReactCrop.css'
+import { cn } from '../lib/utils'
 
 interface ImageCropperProps {
   imageFile: File
@@ -8,9 +9,18 @@ interface ImageCropperProps {
   onSkip: () => void
 }
 
+const RATIOS = [
+  { label: 'Free', value: undefined },
+  { label: 'Square', value: 1 },
+  { label: '16:9', value: 16 / 9 },
+  { label: '4:3', value: 4 / 3 },
+  { label: '3:2', value: 3 / 2 },
+]
+
 export function ImageCropper({ imageFile, onComplete, onSkip }: ImageCropperProps) {
   const [crop, setCrop] = useState<Crop>()
   const [completedCrop, setCompletedCrop] = useState<Crop>()
+  const [aspect, setAspect] = useState<number | undefined>(undefined)
   const [imgSrc, setImgSrc] = useState('')
   const imgRef = useRef<HTMLImageElement>(null)
 
@@ -19,6 +29,37 @@ export function ImageCropper({ imageFile, onComplete, onSkip }: ImageCropperProp
     setImgSrc(objectUrl)
     return () => URL.revokeObjectURL(objectUrl)
   }, [imageFile])
+
+  const onImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const { width, height } = e.currentTarget
+    const initialCrop: Crop = {
+      unit: '%',
+      width: 90,
+      height: 90,
+      x: 5,
+      y: 5
+    }
+    setCrop(initialCrop)
+    setCompletedCrop(initialCrop)
+  }
+
+  const handleAspectChange = (newAspect: number | undefined) => {
+    setAspect(newAspect)
+    if (imgRef.current) {
+      const { width, height } = imgRef.current
+      if (newAspect) {
+        const newCrop = centerCrop(
+          makeAspectCrop({ unit: '%', width: 90 }, newAspect, width, height),
+          width,
+          height
+        )
+        setCrop(newCrop)
+      } else {
+        // Reset to free 90%
+        setCrop({ unit: '%', width: 90, height: 90, x: 5, y: 5 })
+      }
+    }
+  }
 
   const handleApply = async () => {
     if (!completedCrop || !imgRef.current || completedCrop.width === 0 || completedCrop.height === 0) {
@@ -75,16 +116,36 @@ export function ImageCropper({ imageFile, onComplete, onSkip }: ImageCropperProp
             crop={crop}
             onChange={(_, percentCrop) => setCrop(percentCrop)}
             onComplete={(c) => setCompletedCrop(c)}
+            aspect={aspect}
+            ruleOfThirds
             className="max-h-full max-w-full"
           >
             <img
               ref={imgRef}
               src={imgSrc}
               alt="Crop preview"
-              style={{ maxHeight: '60vh', objectFit: 'contain' }}
+              onLoad={onImageLoad}
+              style={{ maxHeight: '55vh', objectFit: 'contain' }}
             />
           </ReactCrop>
         )}
+      </div>
+
+      <div className="flex gap-2 mt-4 flex-wrap justify-center max-w-full">
+        {RATIOS.map((r) => (
+          <button
+            key={r.label}
+            onClick={() => handleAspectChange(r.value)}
+            className={cn(
+              "px-4 py-1.5 rounded-xl text-xs font-bold transition-all",
+              aspect === r.value 
+                ? "bg-primary text-white shadow-[0_0_10px_rgba(249,115,22,0.5)] scale-105" 
+                : "bg-background text-muted-foreground shadow-neu hover:text-foreground hover:scale-[1.02]"
+            )}
+          >
+            {r.label}
+          </button>
+        ))}
       </div>
 
       <div className="flex gap-4 mt-6">
