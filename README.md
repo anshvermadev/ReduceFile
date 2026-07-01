@@ -1,11 +1,12 @@
 # ReduceFile 🗜️
 
-> 🎉 **ReduceFile v2 is now out!** We now feature 100% offline **DOCX (Word Document)** compression alongside image compression!
+> 🎉 **ReduceFile v3 is now out!** We now feature **Image Cropping** support with aspect ratio selection, alongside 100% offline **DOCX (Word Document)** compression!
 
 ReduceFile is a lightning-fast, privacy-first, cross-browser extension that compresses your images and documents entirely offline using WebAssembly.
 
 ## Features ✨
 
+- **Image Cropping:** Crop your images before compression with built-in aspect ratio selection and canvas-based processing!
 - **100% Offline & Private:** Your files never leave your browser. All compression is done locally on your machine.
 - **Vibrant UI:** Features a beautifully crafted, highly attractive, vibrant Neumorphism design. 
 - **Format Support:** Specifically tailored for compressing **JPG**, **PNG**, **WEBP** images, and now **DOCX** Word Documents natively!
