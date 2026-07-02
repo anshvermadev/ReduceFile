@@ -1,6 +1,6 @@
 # ReduceFile 🗜️
 
-> 🎉 **ReduceFile v3 is now out!** We now feature **Image Cropping** support with aspect ratio selection, alongside 100% offline **DOCX (Word Document)** compression!
+> 🎉 **ReduceFile v3 is now out!** [Download the latest v3 release here](https://github.com/anshvermadev/ReduceFile/releases/tag/v3.0.0). We now feature **Image Cropping** support with aspect ratio selection, alongside 100% offline **DOCX (Word Document)** compression!
 
 ReduceFile is a lightning-fast, privacy-first, cross-browser extension that compresses your images and documents entirely offline using WebAssembly.
 
@@ -25,7 +25,7 @@ ReduceFile is a lightning-fast, privacy-first, cross-browser extension that comp
 
 You can install the latest version of ReduceFile directly from GitHub Releases:
 
-1. Go to the [Releases page](../../releases) on this GitHub repository.
+1. Go to the [v3.0.0 Release page](https://github.com/anshvermadev/ReduceFile/releases/tag/v3.0.0) on this GitHub repository.
 2. Download the latest `reducefile-extension.zip` file from the **Assets** section.
 3. Extract the downloaded ZIP file to a folder on your computer.
 4. Open Google Chrome and navigate to `chrome://extensions/`.
